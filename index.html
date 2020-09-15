@@ -55,7 +55,7 @@
     };
     // texture
     var textureLoader = new THREE.TextureLoader( manager );
-    var texture = textureLoader.load( 'Guerrero_lambert1_AlbedoTransparencyojos' );
+    var texture = textureLoader.load( 'obj/TexturaColor.png' );
     // model
     function onProgress( xhr ) {
     if ( xhr.lengthComputable ) {
@@ -66,7 +66,7 @@
 
     function onError() {}
     var loader = new THREE.OBJLoader( manager );
-    loader.load( 'modelo/City.obj', function ( obj ) {
+    loader.load( 'obj/Guerrero.obj', function ( obj ) {
         object = obj;
     }, onProgress, onError );
 			
