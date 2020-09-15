@@ -27,13 +27,7 @@
 			scene.add( cube );
 
 			//camera.position.z = 5;
-			
-	var geometry = new THREE.BoxGeometry( 0.1, 0.1, 50 );
-    var material = new THREE.MeshBasicMaterial({color: 0xf3dcbb});
-    var tubo = new THREE.Mesh( geometry, material );
-    tubo.position.y=110
-    tubo.position.x=50
-    contenedor.add(tubo)
+
 
     function loadModel() {
         object.traverse( function ( child ) {
