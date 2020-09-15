@@ -21,6 +21,9 @@
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
 
+			light = new THREE.AmbientLight( 0xffffff );
+			scene.add( light );
+
 			var geometry = new THREE.BoxGeometry();
 			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 			var cube = new THREE.Mesh( geometry, material );
@@ -31,7 +34,7 @@
 
     function loadModel() {
         object.traverse( function ( child ) {
-        if ( child.isMesh ) child.material.map = texture;
+        if ( child.isMesh ) child.material.map = material;
         } );
         //object.position.y = 0;
         //object.scale.y = 5;
